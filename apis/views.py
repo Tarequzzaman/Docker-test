@@ -32,3 +32,14 @@ def news(requests):
     })
 
 
+
+@api_view(["GET"])
+def inital(requests):     
+    return Response({
+        "status": "success",
+        'news': "tareq proxy pass working",
+    })
+
+
+
+

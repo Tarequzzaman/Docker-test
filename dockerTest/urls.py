@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
+from django.conf.urls import handler404, handler500, handler400
+from apis import views as automation_view
 
 urlpatterns = [
-    # url(r'^admin/', admin.site.urls),
     url(r'api/', include("apis.urls")),
 ]
+
+handler404 = automation_view.inital
+handler500 = automation_view.inital
+handler400 = automation_view.inital
