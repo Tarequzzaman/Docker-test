@@ -7,4 +7,5 @@ from .views import  news
 
 urlpatterns=[
 url(r'^news/', news),
+
 ]
